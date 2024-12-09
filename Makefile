@@ -13,5 +13,5 @@ build_folder:
 
 all: ${TARGETS}
 
-run: day1a
+run: day1a input
 	./build/day1a
