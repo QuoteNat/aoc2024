@@ -7,19 +7,6 @@
 #include <map>
 #include "helper.hpp"
 
-std::vector<std::string> readlines(std::string filepath) {
-    std::string line;
-    std::ifstream input(filepath);
-    std::vector<std::string> lines;
-    if (input.is_open()) {
-        while (getline(input, line)) {
-            lines.push_back(line);
-        }
-    }
-    input.close();
-    return lines;
-}
-
 // this sorts in ascending order, however we'll be using pop_back to start with the smallest numbers
 bool tuple_sort(std::tuple<int, int> a, std::tuple<int, int> b) {
     if (std::get<0>(a) == std::get<0>(b)) {
