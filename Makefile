@@ -2,23 +2,17 @@ TARGETS := day1a day1b
 CXX = g++
 CXXFLAGS = -Wall -g
 obj_files = $(wildcard *.c)
-day1a: input
-	g++ ${CXXFLAGS} src/day1a.cpp -o build/$@
-
-day1b: input
-	g++ ${CXXFLAGS} src/$@.cpp -o build/$@
 
 input:
 	cp -r src/input build
 
 build_folder:
-	mkdir build
-%: %.o input build_folder
+	mkdir -p build
 
-%.o: %.cpp
-	$(CXX) -c $(CXXFLAGS) $< -o $@
+$(TARGETS): build_folder input
+	$(CXX) $(CXXFLAGS) src/$@.cpp src/helper.cpp -o build/$@
 
-all: ${TARGETS}
+all: $(TARGETS) input build_folder
 
 run: day1a input
 	./build/day1a
