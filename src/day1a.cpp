@@ -29,7 +29,7 @@ bool tuple_sort(std::tuple<int, int> a, std::tuple<int, int> b) {
 
 int main() {
     const std::string DELIM = "   "; // For parsing the text file lines
-    auto lines = readlines("build/input/day1.txt");
+    auto lines = readlines("input/day1.txt");
     std::vector<std::tuple<int, int>> col1, col2;
 
     for (int i=0; i < lines.size(); i++) {
