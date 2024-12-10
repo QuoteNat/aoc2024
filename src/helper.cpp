@@ -1,7 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <vector>
+#include "helper.hpp"
 
 std::vector<std::string> readlines(std::string filepath) {
     std::string line;
@@ -15,3 +12,4 @@ std::vector<std::string> readlines(std::string filepath) {
     input.close();
     return lines;
 }
+
