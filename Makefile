@@ -2,7 +2,7 @@ TARGETS := day1a day1b
 CXX = g++
 CXXFLAGS = -Wall -g
 obj_files = $(wildcard *.c)
-
+RUN = day1a
 input:
 	cp -r src/input build
 
@@ -14,5 +14,5 @@ $(TARGETS): build_folder input
 
 all: $(TARGETS) input build_folder
 
-run: day1a input
-	./build/day1a
+run: $(RUN) input
+	./build/$(RUN)
