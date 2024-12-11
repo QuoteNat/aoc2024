@@ -5,7 +5,7 @@
 
 int main() {
     std::vector<std::string> lines = readlines("input/day3.txt");
-    std::regex mul_regex("mul\\(\\d{1,3},\\d{1,3}\\)|do\\(\\)");
+    std::regex mul_regex("mul\\(\\d{1,3},\\d{1,3}\\)");
 
     int sum = 0;
     for (int i=0; i < lines.size(); i++) {
