@@ -1,4 +1,4 @@
-TARGETS := day1a day1b day2a day2b day3a
+TARGETS := day1a day1b day2a day2b day3a day3b
 CXX = g++
 CXXFLAGS = -Wall -g
 RUN = day1a
